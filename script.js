@@ -1,5 +1,6 @@
 console.log("Hello world!");
-getComputerChoise();
+console.log(getComputerChoise());
+console.log(getHumanChoice());
 
 
 function getComputerChoise() {
@@ -15,4 +16,15 @@ function getComputerChoise() {
             return "Scissors";
             break;
     }
+}
+
+function getHumanChoice() {
+    
+    let sign = prompt("What's your sign? (Rock, Paper or Scissors)");
+
+    while (sign.toLowerCase() !== "rock" && sign.toLowerCase() !== "paper" && sign.toLowerCase() !== "scissors") {
+        sign = prompt("Try again");
+    } 
+
+    return sign;
 }
