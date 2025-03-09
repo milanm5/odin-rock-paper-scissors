@@ -86,11 +86,17 @@ function playRound(humanChoice, computerChoice) {
 
 function checkScore() {
     if (Number(humanScore.textContent) === 5) {
-        alert("You win!")
+        alert("You win!");
+        restartScore();
     }
 
     if (Number(computerScore.textContent) === 5) {
-        alert("Computer wins!")
+        alert("Computer wins!");
+        restartScore();
     }
+}
 
+function restartScore() {
+    humanScore.textContent = 0;
+    computerScore.textContent = 0;
 }
