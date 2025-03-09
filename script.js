@@ -1,14 +1,18 @@
 let humanScore = 0; 
 let computerScore = 0;
-playGame();
+document.getElementById("rock-btn").addEventListener("click", function() {playRound("rock", getComputerChoise())});
+document.getElementById("paper-btn").addEventListener("click", function() {playRound("paper", getComputerChoise())});
+document.getElementById("scissors-btn").addEventListener("click", function() {playRound("scissors", getComputerChoise())});
+
+// playGame();
 
 function playGame() {
     
-    for (i = 0; i < 5; i++) {
-        let computerChoice = getComputerChoise();
-        let humanChoice = getHumanChoice();
-        playRound(humanChoice, computerChoice);
-    }
+    // for (i = 0; i < 5; i++) {
+    //     let computerChoice = getComputerChoise();
+    //     let humanChoice = getHumanChoice();
+    //     playRound(humanChoice, computerChoice);
+    // }
     
     if (humanScore > computerScore) {
         console.log("You win!")
