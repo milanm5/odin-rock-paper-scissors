@@ -1,8 +1,8 @@
-let humanScore = 0; 
-let computerScore = 0;
-document.getElementById("rock-btn").addEventListener("click", function() {playRound("rock", getComputerChoise())});
-document.getElementById("paper-btn").addEventListener("click", function() {playRound("paper", getComputerChoise())});
-document.getElementById("scissors-btn").addEventListener("click", function() {playRound("scissors", getComputerChoise())});
+let humanScore = document.getElementById("player-score"); 
+let computerScore = document.getElementById("computer-score");
+document.getElementById("rock-btn").addEventListener("click", () => {playRound("rock", getComputerChoise())});
+document.getElementById("paper-btn").addEventListener("click", () => {playRound("paper", getComputerChoise())});
+document.getElementById("scissors-btn").addEventListener("click", () => {playRound("scissors", getComputerChoise())});
 
 // playGame();
 
@@ -58,26 +58,26 @@ function playRound(humanChoice, computerChoice) {
     if (humanChoice === "rock") {
         if (computerChoice === "paper") {
             console.log("You lose! Paper beats Rock");
-            computerScore++;
+            computerScore.textContent = Number(computerScore.textContent) + 1;
         } else {
             console.log("You win! Rock beats Scissors");
-            humanScore++;
+            humanScore.textContent = Number(humanScore.textContent) + 1;
         }
     } else if (humanChoice === "paper") {
         if (computerChoice === "rock") {
             console.log("You win! Paper beats Rock");
-            humanScore++;
+            humanScore.textContent = Number(humanScore.textContent) + 1;
         } else {
             console.log("You lose! Scissors beats Paper");
-            computerScore++;
+            computerScore.textContent = Number(computerScore.textContent) + 1;
         }
     } else {
         if (computerChoice === "rock") {
             console.log("You lose! Rock beats Scissors");
-            computerScore++;
+            computerScore.textContent = Number(computerScore.textContent) + 1;
         } else {
             console.log("You win! Scissors beats Paper");
-            humanScore++;
+            humanScore.textContent = Number(humanScore.textContent) + 1;
         }
     }
 }

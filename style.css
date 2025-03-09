@@ -1,0 +1,29 @@
+.score-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.score-board {
+    width: 125px;
+    height: 150px;
+    border: 2px solid black;
+    font-size: 125px;
+    text-align: center;
+}
+
+.player-selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    gap: 15px;
+}
+
+.game-btn {
+    width: 75px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: peru;
+}
