@@ -80,4 +80,17 @@ function playRound(humanChoice, computerChoice) {
             humanScore.textContent = Number(humanScore.textContent) + 1;
         }
     }
+
+    checkScore();
+}
+
+function checkScore() {
+    if (Number(humanScore.textContent) === 5) {
+        alert("You win!")
+    }
+
+    if (Number(computerScore.textContent) === 5) {
+        alert("Computer wins!")
+    }
+
 }
