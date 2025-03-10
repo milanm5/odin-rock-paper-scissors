@@ -91,4 +91,6 @@ function checkScore() {
 function restartScore() {
     humanScore.textContent = 0;
     computerScore.textContent = 0;
+    document.getElementById("player-chose").textContent = "-";
+    document.getElementById("computer-chose").textContent = "-";
 }
