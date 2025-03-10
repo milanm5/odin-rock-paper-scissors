@@ -1,38 +1,30 @@
 let humanScore = document.getElementById("player-score"); 
 let computerScore = document.getElementById("computer-score");
-document.getElementById("rock-btn").addEventListener("click", () => {playRound("rock", getComputerChoise())});
-document.getElementById("paper-btn").addEventListener("click", () => {playRound("paper", getComputerChoise())});
-document.getElementById("scissors-btn").addEventListener("click", () => {playRound("scissors", getComputerChoise())});
 
-// playGame();
-
-function playGame() {
-    
-    // for (i = 0; i < 5; i++) {
-    //     let computerChoice = getComputerChoise();
-    //     let humanChoice = getHumanChoice();
-    //     playRound(humanChoice, computerChoice);
-    // }
-    
-    if (humanScore > computerScore) {
-        console.log("You win!")
-    } else if (humanScore < computerScore) {
-        console.log("You lose!");
-    } else {
-        console.log("It's a tie!");
-    }
-}
+// Adds onClick event listener to buttons which when pressed changes the text of selected choice and calls playRound function
+document.getElementById("rock-btn").addEventListener("click", () => {
+    document.getElementById("player-chose").textContent = "Rock";                                                                
+    playRound("rock", getComputerChoise())});
+document.getElementById("paper-btn").addEventListener("click", () => {
+    document.getElementById("player-chose").textContent = "Paper";
+    playRound("paper", getComputerChoise())});
+document.getElementById("scissors-btn").addEventListener("click", () => {
+    document.getElementById("player-chose").textContent = "Scissors";
+    playRound("scissors", getComputerChoise())});
 
 function getComputerChoise() {
     let randomChoise = Math.floor((Math.random() * 3)+ 1); 
     switch(randomChoise) {
         case 1: 
+            document.getElementById("computer-chose").textContent = "Rock";
             return "rock";
             break;
         case 2: 
+            document.getElementById("computer-chose").textContent = "Paper";
             return "paper";
             break;
         case 3:
+            document.getElementById("computer-chose").textContent = "Scissors";
             return "scissors";
             break;
     }

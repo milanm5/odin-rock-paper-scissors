@@ -1,15 +1,37 @@
-.score-wrapper {
+.display-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.score-wrapper, .selected-sign-wrapper, .title-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
 
+.title {
+    font-size: 18px;
+    font-weight: 600;
+    width: 125px;
+    text-align: center;
+}
+
 .score-board {
     width: 125px;
     height: 150px;
     border: 2px solid black;
+    border-radius: 6px;
     font-size: 125px;
+    text-align: center;
+}
+
+.selected-sign {
+    width: 125px;
+    height: 20px;
+    border: 2px solid black;
+    border-radius: 6px;
     text-align: center;
 }
 
